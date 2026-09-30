@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>ONG Transformar - Página Inicial</title>
+    <!-- Linha que conecta com a sua folha de estilos contendo o Design System -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGAÇÃO (Micro Layout com Flexbox) -->
+    <header class="navbar">
+    <div class="navbar__brand">
+        <!-- Espaço reservado para a logo oficial com as cores da marca -->
+        <img src="images/logo-ong.jpeg" alt="Logotipo oficial da ONG Transformar" style="height: 50px;">
+    </div>
+    <nav>
+        <ul class="navbar__menu">
+    <!-- Adicionamos o # antes de cada rota e o rótulo data-link -->
+    <li><a href="#/" data-link>Início</a></li>
+    <li><a href="#/projetos" data-link>Nossos Projetos</a></li>
+    <li><a href="#/cadastro" data-link>Faça Parte</a></li>
+</ul>
+
+    </nav>
+</header>
+
+    <!-- CONTAINER PRINCIPAL DO SITE (Macro Layout com CSS Grid) -->
+    <main id="app" class="container">
+        
+        <!-- SEÇÃO DE BOAS-VINDAS / HERO -->
+        <section class="grid-row" style="margin-top: var(--space-xl); margin-bottom: var(--space-xl); align-items: center;">
+            <!-- Texto principal ocupando 7 colunas em telas grandes -->
+            <div class="col-12 col-lg-7">
+                <h1>Transformando Vidas Através da Solidariedade</h1>
+                <p>Somos uma organização não governamental dedicada a apoiar comunidades em situação de extrema vulnerabilidade social, promovendo inclusão, projetos educacionais e apoio humanitário.</p>
+                <a href="#/cadastro" data-link class="botao-doacao" style="text-decoration: none; display: inline-block;">Quero Ajudar</a>
+            </div>
+            
+            <!-- Imagem de destaque ocupando 5 colunas em telas grandes -->
+            <div class="col-12 col-lg-5">
+                <img src="images/ong-fachada.jpeg" alt="Fachada da sede da ONG com voluntários e funcionários sorrindo na entrada principal." style="max-width: 600px; width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 8px;">
+            </div>
+        </section>
+
+        <hr style="border: 0; border-top: 1px solid var(--color-neutral-medium); margin: var(--space-xl) 0;">
+
+        <!-- SEÇÃO DE CONTATO / RODAPÉ DA PÁGINA -->
+        <section class="grid-row" style="margin-bottom: var(--space-xl);">
+            <div class="col-12 col-md-6">
+                <h2>Entre em Contato Conosco</h2>
+                <p>Tem alguma dúvida ou quer conhecer nossa sede? Fale com a nossa equipe:</p>
+            </div>
+            
+            <div class="col-12 col-md-6">
+                <article class="card-projeto">
+                    <h3>Canais Oficiais</h3>
+                    <p><strong>E-mail:</strong> contato@ongtransformar.org</p>
+                    <p><strong>Telefone:</strong> (61) 99999-9999</p>
+                    <p><strong>Endereço:</strong> Rua da Solidariedade, 123 - Brasília, DF</p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ INSTITUCIONAL -->
+    <footer style="background-color: var(--color-neutral-dark); color: #ffffff; text-align: center; padding: var(--space-md) 0; margin-top: var(--space-xl);">
+        <div class="container">
+            <p style="margin: 0; font-size: var(--font-size-small);">© 2026 ONG Transformar. Todos os direitos reservados. Orgulhosamente construído para acessibilidade de todos.</p>
+        </div>
+    </footer>
+<!-- Carrega o arquivo principal de JavaScript como um Módulo -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

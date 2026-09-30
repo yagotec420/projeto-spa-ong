@@ -1,0 +1,96 @@
+<!DOCTYPE html>    
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <title>ONG Transformar - Nossos Projetos</title>
+    <!-- Conexão com o seu arquivo contendo o Design System -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+        /* Estilo rápido para a lista de doações virar botões horizontais com flexbox */
+        .botoes-doacao-grupo {
+            display: flex;
+            gap: var(--space-sm);
+            list-style: none;
+            padding: 0;
+            margin-top: var(--space-sm);
+        }
+        .botoes-doacao-grupo a {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: var(--color-secondary-pink);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: var(--font-size-small);
+        }
+    </style>
+</head>
+<body>
+    <!-- CONTAINER PRINCIPAL (Macro Layout com CSS Grid) -->
+    <main class="container" style="margin-top: var(--space-xl); margin-bottom: var(--space-xl);">
+        
+        <!-- TÍTULO PRINCIPAL DA PÁGINA -->
+        <div class="grid-row" style="margin-bottom: var(--space-lg);">
+            <div class="col-12">
+                <h1>Como Você Pode Ajudar a Nossa Causa</h1>
+            </div>
+        </div>
+
+        <!-- MALHA DE PROJETOS (Dividida em 2 colunas grandes na tela de computador) -->
+        <div class="grid-row">
+            
+            <!-- COLUNA 1: PROGRAMAS DE VOLUNTARIADO -->
+            <div class="col-12 col-md-6" style="margin-bottom: var(--space-md);">
+                <article class="card-projeto">
+                    <div>
+                      <span style="background-color: var(--color-primary-green); color: #121212; padding: 4px 8px; border-radius: 20px; font-size: var(--font-size-small); font-weight: bold; display: inline-block; margin-bottom: var(--space-xs);">Urgente</span>
+
+                        <h2>Programas de Voluntariado</h2>
+                        <p>Sua força de trabalho e carinho podem mudar o dia de alguém. Veja nossas frentes ativas:</p>
+                        
+                        <h3 style="color: var(--color-primary-blue); margin-top: var(--space-sm);">Reforço Escolar Comunitário</h3>
+                        <p>Buscamos voluntários para dar aulas de alfabetização, matemática básica e inglês para crianças de 6 a 12 anos aos sábados.</p>
+                    </div>
+                    
+                    <div class="card-projeto__footer">
+                        <a href="#/cadastro" data-link class="botao-doacao" style="text-decoration: none;">Ser Voluntário</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- COLUNA 2: CAMPANHAS DE DOAÇÃO FINANCEIRA -->
+            <div class="col-12 col-md-6" style="margin-bottom: var(--space-md);">
+                <article class="card-projeto">
+                    <div>
+                        <h2>Campanhas de Doação Financeira</h2>
+                        <p>Suas contribuições mantêm nossos projetos vivos. Todo o valor arrecadado é revertido na compra de alimentos e insumos médicos.</p>
+                    </div>
+                    
+                    <div class="card-projeto__footer" style="flex-direction: column; align-items: flex-start;">
+                        <span style="font-weight: bold; font-size: var(--font-size-small); color: var(--color-neutral-medium);">Escolha um valor para contribuir:</span>
+                        <!-- Grupo flexbox para os links de valores rápidos -->
+                        <ul class="botoes-doacao-grupo">
+                            <li><a href="#/cadastro" data-link>Doar R$ 20,00</a></li>
+                            <li><a href="#/cadastro" data-link>Doar R$ 50,00</a></li>
+                            <li><a href="#/cadastro" data-link>Doar R$ 100,00</a></li>    
+                        </ul>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- RODAPÉ INSTITUCIONAL -->
+    <footer style="background-color: var(--color-neutral-dark); color: #ffffff; text-align: center; padding: var(--space-md) 0; margin-top: var(--space-xl);">
+        <div class="container">
+            <p style="margin: 0; font-size: var(--font-size-small);">© 2026 ONG Transformar. Todos os direitos reservados. Orgulhosamente construído para acessibilidade de todos.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <title>ONG Transformar - Faça Parte</title>
+    <!-- Conexão com o seu arquivo contendo o Design System -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+        /* Estilos complementares específicos para a organização interna do formulário */
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: var(--space-sm);
+        }
+        .form-group label {
+            font-size: var(--font-size-small);
+            font-weight: bold;
+            margin-bottom: var(--space-xs);
+            color: var(--color-neutral-medium);
+        }
+        .form-group input, .form-group select {
+            padding: var(--space-xs);
+            border: 1px solid var(--color-neutral-medium);
+            border-radius: 4px;
+            font-size: var(--font-size-body);
+            background-color: #ffffff;
+        }
+        .form-group input:focus {
+            outline: 2px solid var(--color-primary-blue);
+        }
+        fieldset {
+            border: 1px solid var(--color-neutral-medium);
+            border-radius: 8px;
+            padding: var(--space-md);
+            margin-bottom: var(--space-md);
+            background-color: #ffffff;
+        }
+        legend {
+            font-weight: bold;
+            color: var(--color-primary-green);
+            padding: 0 var(--space-xs);
+            font-size: var(--font-size-h3);
+        }
+    </style>
+</head>
+<body>
+    <!-- CONTAINER PRINCIPAL (Macro Layout com CSS Grid) -->
+    <main class="container" style="margin-top: var(--space-xl); margin-bottom: var(--space-xl);">
+        
+        <!-- TÍTULO DA PÁGINA -->
+        <div class="grid-row" style="margin-bottom: var(--space-md);">
+            <div class="col-12">
+                <h1>Formulário de Inscrição para Novos Apoiadores</h1>
+                <p>Preencha os campos abaixo de maneira correta para se registrar em nosso banco de dados de voluntários e doadores.</p>
+            </div>
+        </div>
+        <!-- FORMULÁRIO COM SEÇÕES DIVIDIDAS EM GRID -->
+        <!-- Mude apenas essa linha -->
+<form id="cadastro-form" action="#" method="POST">
+    <p style="font-size: var(--font-size-small); color: var(--color-neutral-medium); margin-bottom: var(--space-md);">
+        Os campos marcados com <strong style="color: #ff3333;">*</strong> são de preenchimento obrigatório.
+    </p>
+            <!-- SEÇÃO 1: DADOS PESSOAIS -->
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <div class="grid-row">
+                    <!-- Nome Completo ocupa 12 colunas inteiras -->
+                    <div class="col-12 form-group">
+                        <label for="nome">Nome Completo: <span aria-hidden="true" style="color: #ff3333;">*</span></label>
+                        <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+                        <span id="erro-nome" style="color: #ff3333; font-size: var(--font-size-small); display: block; margin-top: 4px; font-weight: bold;"></span>
+                    </div>
+                    
+                    <!-- E-mail ocupa 6 colunas em computadores (metade) -->
+                    <div class="col-12 col-md-6 form-group">
+                        <label for="email">E-mail Corporativo ou Pessoal: <span aria-hidden="true" style="color: #ff3333;">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
+                        <span id="erro-email" style="color: #ff3333; font-size: var(--font-size-small); display: block; margin-top: 4px; font-weight: bold;"></span>
+                    </div>
+                    
+                    <!-- Data de Nascimento ocupa 6 colunas em computadores (metade) -->
+                    <div class="col-12 col-md-6 form-group">
+                        <label for="nascimento">Data de Nascimento: <span aria-hidden="true" style="color: #ff3333;">*</span></label>
+                        <input type="date" id="nascimento" name="nascimento" required>
+                    </div>
+
+                    <!-- CPF ocupa 6 colunas em computadores (metade) -->
+                    <div class="col-12 col-md-6 form-group">
+                        <label for="cpf">CPF (apenas números): <span aria-hidden="true" style="color: #ff3333;">*</span></label>
+                        <input type="text" id="cpf" name="cpf" required placeholder="00000000000">
+                        <span id="erro-cpf" style="color: #ff3333; font-size: var(--font-size-small); display: block; margin-top: 4px; font-weight: bold;"></span>
+                    </div>
+
+                    <!-- Telefone ocupa 6 colunas em computadores (metade) -->
+                    <div class="col-12 col-md-6 form-group">
+                        <label for="telefone">Telefone com DDD: <span aria-hidden="true" style="color: #ff3333;">*</span></label>
+                        <input type="tel" id="telefone" name="telefone" required placeholder="(00) 99999-9999">
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- SEÇÃO 2: INFORMAÇÕES DE ENDEREÇO -->
+            <fieldset>
+                <legend>Informações de Endereço</legend>
+                <div class="grid-row">
+                    <!-- CEP ocupa 4 colunas em computadores (um terço) -->
+                    <div class="col-12 col-md-4 form-group">
+                        <label for="cep">CEP: <span aria-hidden="true" style="color: #ff3333;">*</span></label>
+                        <input type="text" id="cep" name="cep" required placeholder="00000-000">
+                    </div>
+
+                    <!-- Cidade ocupa 8 colunas em computadores (dois terços) -->
+                    <div class="col-12 col-md-8 form-group">
+                        <label for="cidade">Cidade:<span aria-hidden="true" style="color: #ff3333;">*</span></label>
+                        <input type="text" id="cidade" name="cidade" required placeholder="Sua Cidade">
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- BOTÃO DE ENVIAR (Usa o Rosa da Marca configurado no CSS) -->
+            <div class="grid-row" style="margin-top: var(--space-md);">
+                <div class="col-12" style="text-align: right;">
+                    <button type="submit" class="botao-doacao" style="border: none;">Enviar Meu Cadastro</button>
+                </div>
+            </div>
+
+        </form>
+
+    </main>
+
+    <!-- RODAPÉ INSTITUCIONAL -->
+    <footer style="background-color: var(--color-neutral-dark); color: #ffffff; text-align: center; padding: var(--space-md) 0; margin-top: var(--space-xl);">
+        <div class="container">
+            <p style="margin: 0; font-size: var(--font-size-small);">© 2026 ONG Transformar. Todos os direitos reservados. Orgulhosamente construído para acessibilidade de todos.</p>
+        </div>
+    </footer>
+</body>
+</html>
+ 

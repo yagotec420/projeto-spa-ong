@@ -1,0 +1,166 @@
+:root {
+  /* Cores da Logo */
+  --color-primary-green: #9cd145;
+  --color-primary-blue: #23b5c4;
+  --color-secondary-pink: #d13a7a;
+  
+  /* Cores de Alerta */
+  --color-feedback-success: #2e7d32;
+  --color-feedback-danger: #c62828;
+  
+  /* Tons Neutros */
+  --color-neutral-dark: #121212;
+  --color-neutral-medium: #555555;
+  --color-neutral-light: #f9f9f9;
+
+  /* Tamanhos de Letra (Hierarquia) */
+  --font-size-h1: 2.25rem;
+  --font-size-h2: 1.75rem;
+  --font-size-h3: 1.25rem;
+  --font-size-body: 1rem;
+  --font-size-small: 0.875rem;
+
+  /* Espaçamentos Modulares */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+}
+
+/* ==========================================
+   2. REGRAS GERAIS PARA O SITE
+   ========================================== */
+body {
+  background-color: var(--color-neutral-light);
+  color: var(--color-neutral-dark);
+  font-size: var(--font-size-body);
+  font-family: sans-serif; 
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Aplicando nos seus títulos HTML */
+h1 {
+  font-size: var(--font-size-h1);
+  color: var(--color-primary-blue); /* Aplica o azul da logo */
+  margin-bottom: var(--space-md);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  color: var(--color-primary-green); /* Aplica o verde da logo */
+  margin-bottom: var(--space-sm);
+}
+
+p {
+  font-size: var(--font-size-body);
+  margin-bottom: var(--space-sm);
+}
+/* ==========================================================================
+   SISTEMA MACRO DE LAYOUT: CSS GRID DE 12 COLUNAS (Mobile-First)
+   ========================================================================== */
+
+/* Container que limita a largura máxima do site para não quebrar o visual */
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--space-sm);
+  padding-left: var(--space-sm);
+}
+
+/* O esqueleto do Grid de 12 colunas */
+.grid-row {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr)); /* Divide a tela em 12 colunas iguais */
+  gap: var(--space-sm); /* Espaçamento modular entre as colunas */
+}
+
+/* Comportamento padrão para celular (Mobile): Tudo ocupa as 12 colunas (uma coisa embaixo da outra) */
+.col-12 { grid-column: span 12 / span 12; }
+.col-6  { grid-column: span 6 / span 6; }
+.col-4  { grid-column: span 4 / span 4; }
+
+/* 
+   CENÁRIOS ADAPTATIVOS (OS 5 BREAKPOINTS OBRIGATÓRIOS)
+   Garantem a transição perfeita entre qualquer tamanho de ecrã/tela.
+*/
+
+/* Cenário 1: Smartphones Pequenos / Retrato (xs) - até 480px */
+@media (min-width: 480px) {
+  .container { max-width: 100%; }
+  .col-xs-6 { grid-column: span 6 / span 6; } /* Dois elementos por linha */
+}
+
+/* Cenário 2: Smartphones Grandes / Paisagem (sm) - de 481px até 768px */
+@media (min-width: 640px) {
+  .container { max-width: 620px; }
+  .col-sm-4 { grid-column: span 4 / span 4; } /* Três elementos por linha */
+}
+
+/* Cenário 3: Tablets (md) - de 769px até 1024px */
+@media (min-width: 768px) {
+  .container { max-width: 720px; }
+  .col-md-4 { grid-column: span 4 / span 4; }
+  .col-md-3 { grid-column: span 3 / span 3; } /* Quatro elementos por linha */
+}
+
+/* Cenário 4: Desktops Padrão / Notebooks (lg) - de 1025px até 1440px */
+@media (min-width: 1024px) {
+  .container { max-width: 960px; }
+  .grid-row { gap: var(--space-md); } /* Aumenta o espaçamento em telas maiores */
+  
+  .col-lg-12 { grid-column: span 12 / span 12; }
+  .col-lg-8  { grid-column: span 8 / span 8; }  /* Conteúdo principal (ex: posts da ONG) */
+  .col-lg-4  { grid-column: span 4 / span 4; }  /* Barra lateral (ex: botão de doação) */
+}
+
+/* Cenário 5: Desktops Panorâmicos / Monitores Grandes (xl) - acima de 1440px */
+@media (min-width: 1440px) {
+  .container { max-width: 1320px; }
+  
+  .col-xl-4 { grid-column: span 4 / span 4; }
+  .col-xl-3 { grid-column: span 3 / span 3; }
+}
+/* ==========================================================================
+   MICRO LAYOUT: Componentes de Interface com Flexbox (Eixo Unidimensional)
+   ========================================================================== */
+
+/* Componente 1: Barra de Navegação (Menu Superior) */
+.navbar {
+  display: flex;
+  flex-direction: row;            /* Alinha os itens em linha horizontal */
+  justify-content: space-between; /* Empurra a logo para a esquerda e o menu para a direita */
+  align-items: center;            /* Alinha os itens perfeitamente no centro vertical */
+  padding: var(--space-xs) var(--space-md);
+  background-color: #ffffff;
+}
+
+.navbar__menu {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-sm);           /* Espaçamento uniforme entre os links do menu */
+  list-style: none;
+}
+
+/* Componente 2: Cartão de Projetos (Cards da ONG) */
+.card-projeto {
+  display: flex;
+  flex-direction: column;         /* Alinha os elementos empilhados verticalmente */
+  justify-content: space-between; /* Garante que o botão fique sempre colado no rodapé do card */
+  height: 100%;                   /* Faz o card ocupar toda a altura da linha do Grid */
+  padding: var(--space-md);
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+/* Componente 3: Rodapé do Cartão (Alinhamento de Informações) */
+.card-projeto__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Separa informações (ex: metas de arrecadação) */
+  align-items: center;
+  margin-top: var(--space-sm);
+}
