@@ -46,7 +46,7 @@ PROJETO ONG/
 ![Screenshot da página de listagem de projetos](images/programasedoação.png)
 
 ### ✍️ Faça Parte (Formulário de Cadastro)
-![Screenshot do formulário de inscrição reativo](images/formulário.png)
+![Screenshot do formulário de inscrição reativo](images/formulário1.png)
 ![Screenshot do formulário de inscrição reativo](images/formulário2.png)
 
 
