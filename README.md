@@ -39,14 +39,15 @@ PROJETO ONG/
 ### 🏠 Página Inicial (Início)
 ![Screenshot da página inicial do site](images/inicio.png)
 
-### 📋 Nossos Projetos
-![Screenshot da página de listagem de projetos](images/prohgramasedoação.png)
+### 📞 Contatos e Canais Oficiais
+![Screenshot da seção de contatos da ONG](images/contato.png)
+
+### 📋 Nossos Projetos e Doações
+![Screenshot da página de listagem de projetos](images/programasedoação.png)
 
 ### ✍️ Faça Parte (Formulário de Cadastro)
 ![Screenshot do formulário de inscrição reativo](images/formulário.png)
-![Screenshot do formulário de inscrção reativo](images/formulário2.png)
-### 📞 Contatos e Canais Oficiais
-![Screenshot da seção de contatos da ONG](images/contato.png)
+![Screenshot do formulário de inscrição reativo](images/formulário2.png)
 
 
 ## 💻 Como Rodar o Projeto Localmente
